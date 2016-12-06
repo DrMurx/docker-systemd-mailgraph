@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  mailgraph:
+    image: drmurx/docker-systemd-mailgraph:0.0.1
+    logging:
+      driver: none
+    volumes:
+      - /mnt/docker/mailgraph:/var/lib/mailgraph
+      - /var/log/journal:/app/journal
+      
